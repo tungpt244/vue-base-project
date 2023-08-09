@@ -1,7 +1,8 @@
 {
   "name": "base-project",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
+  "author": "tungpt244",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
@@ -12,10 +13,13 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@vee-validate/yup": "^4.11.1",
     "@vueuse/core": "^10.2.1",
     "axios": "^1.4.0",
     "pinia": "^2.1.4",
+    "vee-validate": "^4.11.1",
     "vue": "^3.3.4",
+    "vue-i18n": "9.3.0-beta.25",
     "vue-router": "^4.2.4",
     "yup": "^1.2.0"
   },
@@ -36,8 +40,11 @@
     "prettier-plugin-tailwindcss": "^0.4.1",
     "tailwindcss": "^3.3.3",
     "typescript": "~5.1.6",
+    "unplugin-fonts": "^1.0.3",
+    "unplugin-vue-components": "^0.25.1",
     "unplugin-vue-router": "^0.6.4",
     "vite": "^4.4.6",
+    "vite-plugin-vue-layouts": "^0.8.0",
     "vue-tsc": "^1.8.6"
   }
 }

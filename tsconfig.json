@@ -1,11 +1,35 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "vite.config.*",
+    "env.d.ts",
+    "src/**/*.ts",
+    "src/**/*.vue",
+    "locales/*.json",
+    "typed-router.d.ts",
+    "components.d.ts"
+  ],
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@proxy/*": ["./src/proxy/*"]
     },
-    {
-      "path": "./tsconfig.app.json"
-    }
-  ]
+    "module": "esnext",
+    "target": "esnext",
+    "lib": ["DOM", "esnext"],
+    "strict": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["node", "vite-plugin-vue-layouts/client", "unplugin-fonts/client"]
+  }
 }
